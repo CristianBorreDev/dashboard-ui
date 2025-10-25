@@ -43,7 +43,6 @@ Diseñador y desarrollador de experiencias digitales.
 
 📩 [crstnborre@gmail.com](mailto:crstnborre@gmail.com)  
 🌐 [cristian-dev.vercel.app](https://cristian-dev.vercel.app)  
-🧪 [Laboratorio](https://cristian-labs.vercel.app)
 
 ---
 
