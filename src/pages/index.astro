@@ -1,11 +1,94 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import MetricCard from "../components/MetricCard.astro";
+import VisualCard from "../components/VisualCard.astro";
+import ChartCard from "../components/ChartCard.tsx";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import metrics from "../data/metrics.json";
+import visuals from "../data/visuals.json";
+import charts from "../data/charts.json";
+
+const metricsData = metrics.length > 0 ? metrics : [];
+const visualsData = visuals.length > 0 ? visuals : [];
+const chartsData = charts.length > 0 ? charts : [];
 ---
 
 <Layout>
-	<Welcome />
+  <div>
+    <!-- Encabezado poético -->
+    <section class="text-center mb-8 max-w-3xl mx-auto relative">
+      <h1 class="text-xl sm:text-2xl font-semibold text-gray-100 mb-3 leading-snug">
+        El orden no se impone, se revela cuando las piezas dialogan.
+      </h1>
+      <p class="text-sm sm:text-base text-gray-500">
+        Sistema central · Integración de módulos y visualizaciones
+      </p>
+    </section>
+
+    <!-- Métricas -->
+    <section class="mb-6">
+      <h2 class="text-gray-300 text-sm font-medium uppercase tracking-widest mb-4 pl-1">
+        Métricas clave
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {metricsData.map((metric: any) => (
+          <MetricCard
+            title={metric.title}
+            value={metric.value}
+            change={metric.change}
+            trend={metric.trend}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- Gráficas -->
+    <section class="mb-6">
+      <h2 class="text-gray-300 text-sm font-medium uppercase tracking-widest mb-4 pl-1">
+        Gráficas de análisis
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {chartsData.map((chart: any) => (
+          <ChartCard
+            client:load
+            title={chart.title}
+            type={chart.type}
+            data={chart.data}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- Visuales -->
+    <section class="mb-6">
+      <h2 class="text-gray-300 text-sm font-medium uppercase tracking-widest mb-4 pl-1">
+        Exploraciones visuales
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {visualsData.map((visual: any) => (
+          <VisualCard
+            image={visual.image}
+            title={visual.title}
+            description={visual.description}
+            concept={visual.concept}
+            focus={visual.focus}
+            tools={visual.tools}
+            palette={visual.palette}
+            year={visual.year}
+          />
+        ))}
+      </div>
+    </section>
+  </div>
 </Layout>
+
+<style>
+  section h2 {
+    letter-spacing: 0.08em;
+  }
+
+
+  .gradient-border {
+    border-image: linear-gradient(to right, #7b5cff, #9a85ff, #3b82f6) 1;
+  }
+</style>

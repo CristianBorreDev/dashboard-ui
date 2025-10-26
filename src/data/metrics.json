@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Proyectos activos",
+    "value": "12",
+    "change": "+3%",
+    "trend": "up"
+  },
+  {
+    "title": "Componentes visuales",
+    "value": "28",
+    "change": "+5%",
+    "trend": "up"
+  },
+  {
+    "title": "Prototipos funcionales",
+    "value": "7",
+    "change": "-1%",
+    "trend": "down"
+  },
+  {
+    "title": "Repositorios totales",
+    "value": "16",
+    "change": "+2%",
+    "trend": "up"
+  }
+]

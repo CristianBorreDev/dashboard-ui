@@ -1,0 +1,82 @@
+---
+const { image, title, description, concept, focus, tools, palette, year } = Astro.props;
+---
+
+<article
+  class="group relative overflow-hidden rounded-2xl border border-[#1F2226] bg-[#0C0E11]/70 backdrop-blur-md 
+  hover:border-[#7B5CFF]/40 hover:shadow-[0_0_40px_rgba(123,92,255,0.2)] 
+  transition-all duration-700 cursor-pointer flex flex-col"
+>
+  <!-- Imagen de fondo -->
+  <div class="relative w-full h-72 overflow-hidden rounded-t-2xl">
+    <img
+      src={image}
+      alt={title}
+      loading="lazy"
+      class="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-[1200ms] ease-[cubic-bezier(0.19,1,0.22,1)]"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0E] via-[#0B0D0E]/50 to-transparent opacity-90 group-hover:opacity-75 transition-opacity duration-700"></div>
+  </div>
+
+  <!-- Capa de información -->
+  <div
+    class="absolute inset-0 flex flex-col justify-end p-6
+    bg-gradient-to-t from-[#0B0D0E]/95 via-[#0B0D0E]/60 to-transparent
+    md:bg-none md:justify-end md:p-6"
+  >
+    <div class="transform transition-all duration-700 md:translate-y-96 md:group-hover:translate-y-0">
+      <!-- Título -->
+      <h3
+        class="text-lg font-semibold text-gray-100 mb-2 tracking-wide
+        group-hover:text-[#B9A9FF] transition-colors duration-500"
+      >
+        {title}
+      </h3>
+
+      <!-- Descripción -->
+      <p
+        class="text-gray-300 text-sm leading-relaxed mb-3 max-w-[90%]
+        transition-opacity duration-700 md:opacity-0 md:group-hover:opacity-100"
+      >
+        {description}
+      </p>
+
+      <!-- Concepto (solo desktop) -->
+      <p
+        class="hidden md:block text-xs text-gray-500 italic leading-snug mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+      >
+        {concept}
+      </p>
+
+      <!-- Focus tags -->
+      <div
+        class="flex flex-wrap gap-2 mt-3
+        opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700"
+      >
+        {focus.map((tag: any) => (
+          <span
+            class="text-[10px] uppercase tracking-wide bg-[#14141A]/70 px-2 py-1 rounded-md text-[#9A85FF] border border-[#23252A] font-medium"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <!-- Footer -->
+      <div
+        class="flex justify-between items-center text-[11px] mt-5 text-gray-500 font-mono border-t border-[#1F2226]/50 pt-2
+        opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700"
+      >
+        <span>{year}</span>
+        <span class="truncate">{tools.join(" · ")}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paleta visual -->
+  <div class="absolute bottom-0 left-0 flex w-full">
+    {palette.map((color: any) => (
+      <div style={`background:${color}`} class="flex-1 h-[3px]"></div>
+    ))}
+  </div>
+</article>

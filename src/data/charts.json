@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Crecimiento mensual",
+    "type": "line",
+    "data": [
+      { "name": "Ene", "value": 120 },
+      { "name": "Feb", "value": 145 },
+      { "name": "Mar", "value": 180 },
+      { "name": "Abr", "value": 160 },
+      { "name": "May", "value": 200 },
+      { "name": "Jun", "value": 230 },
+      { "name": "Jul", "value": 260 }
+    ]
+  },
+  {
+    "title": "Ventas por categoría",
+    "type": "bar",
+    "data": [
+      { "name": "UI Kits", "value": 320 },
+      { "name": "Dashboards", "value": 250 },
+      { "name": "Sistemas", "value": 210 },
+      { "name": "Labs", "value": 180 }
+    ]
+  },
+  {
+    "title": "Distribución de plataformas",
+    "type": "pie",
+    "data": [
+      { "name": "Web", "value": 60 },
+      { "name": "Mobile", "value": 25 },
+      { "name": "Desktop", "value": 15 }
+    ]
+  },
+  {
+    "title": "Rendimiento por área",
+    "type": "radar",
+    "data": [
+      { "metric": "Diseño", "value": 95 },
+      { "metric": "Frontend", "value": 85 },
+      { "metric": "Backend", "value": 60 },
+      { "metric": "Interactividad", "value": 80 },
+      { "metric": "Exploración", "value": 90 }
+    ]
+  }
+]

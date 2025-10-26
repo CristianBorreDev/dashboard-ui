@@ -1,0 +1,42 @@
+[
+  {
+    "image": "/images/image1.png",
+    "title": "Aether Form",
+    "description": "Formas etéreas entre vacío y materia, equilibrio y calma visual.",
+    "concept": "El espacio respira.",
+    "focus": ["composición", "contraste", "atmósfera"],
+    "tools": ["Astro", "TailwindCSS", "Framer Motion"],
+    "palette": ["#0D0D12", "#6E56CF", "#A78BFA", "#F3E8FF", "#1C1C1F"],
+    "year": "2025"
+  },
+  {
+    "image": "/images/image2.png",
+    "title": "Spectra Motion",
+    "description": "Transiciones de color como lenguaje emocional y flujo visual.",
+    "concept": "La luz se mueve como emoción.",
+    "focus": ["color", "transición", "movimiento"],
+    "tools": ["Astro", "TailwindCSS", "CSS Blend Modes"],
+    "palette": ["#0A0A0C", "#7B5CFF", "#FF8AE2", "#FFC857", "#171717"],
+    "year": "2025"
+  },
+  {
+    "image": "/images/image3.png",
+    "title": "Echo Surface",
+    "description": "Repetición y textura como eco visual dentro del espacio digital.",
+    "concept": "Toda forma deja huella.",
+    "focus": ["ritmo", "textura", "patrón"],
+    "tools": ["Astro", "TailwindCSS", "Canvas API"],
+    "palette": ["#0C0C10", "#2E1065", "#5B21B6", "#8B5CF6", "#EDE9FE"],
+    "year": "2025"
+  },
+  {
+    "image": "/images/image4.png",
+    "title": "Orbit Layers",
+    "description": "Geometrías circulares que exploran ritmo y jerarquía espacial.",
+    "concept": "Cada órbita tiene su música.",
+    "focus": ["geometría", "movimiento", "espacio"],
+    "tools": ["Astro", "TailwindCSS", "SVG Animation"],
+    "palette": ["#0E0E13", "#1E3A8A", "#3B82F6", "#93C5FD", "#F9FAFB"],
+    "year": "2025"
+  }
+]
